@@ -47,7 +47,7 @@ h4 {
     text-transform: capitalize;
     letter-spacing: 2px;
     position: relative;
-    color: rgba(116, 116, 185, 1);
+    color: rgba(238, 162, 164, 1);
     margin-left: 40px;
     font-weight: 700;
 }
@@ -59,7 +59,7 @@ h4:before {
     content: "";
     display: block;
     height: 2px;
-    background: rgba(116, 116, 185, 1);
+    background: rgba(238, 162, 164, 1);
     top: 9px;
 }
 
@@ -81,6 +81,30 @@ p {
     font-weight: 400;
 }
 
+.hashtag {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #444;
+    box-shadow: inset 0 0 0 0em rgba(238, 162, 164, 1);
+    display: inline-block;
+    margin-bottom: 1.2em;
+    margin-right: 1.2em;
+    padding: 0.5em 2em 0.4em 2em;
+}
+
+.hashtag:hover {
+    box-shadow: inset 40em 0 0 0 rgba(238, 162, 164, 1);
+}
+
 
 
 
@@ -100,6 +124,30 @@ body {
 
 .h-50 {
     height: 50px;
+}
+
+.h-img {
+    height: 60px;
+}
+
+mark{
+    color: white;
+    font-weight: bold;
+    background-color: rgba(238, 162, 164, 1);
+}
+
+.iframe-container {
+  padding-top: 36.25%; /* 16:9 */
+  position: relative;
+} 
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -148,7 +196,7 @@ body {
     width: 100%;
     -webkit-animation: rotation 1s linear infinite;
     animation: rotation 1s linear infinite;
-    border: 2px solid rgba(116, 116, 185, 1);
+    border: 2px solid rgba(238, 162, 164, 1);
     border-top: 2px solid transparent;
     border-radius: 100%
 }
@@ -289,12 +337,12 @@ a:focus {
 }
 
 a:hover {
-    color: rgba(116, 116, 185, 1);
+    color: rgba(238, 162, 164, 1);
     text-decoration: none;
 }
 
 a.active {
-    color: rgba(116, 116, 185, 1);
+    color: rgba(238, 162, 164, 1);
 }
 
 
@@ -332,11 +380,11 @@ a.active {
 
 .about-border {
     position: absolute;
-    border: 8px solid rgba(116, 116, 185, 0.4);
+    border: 4px solid rgba(238, 162, 164, 0.4);
     width: 400px;
     height: 400px;
     top: 40px;
-    left: 50px;
+    right: 40px;
     z-index: 1
 }
 
@@ -345,6 +393,7 @@ a.active {
 
 #experience {
     padding: 100px 0;
+    background: #f3f3f3
 }
 
 .experience-row {
@@ -356,7 +405,7 @@ a.active {
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
     letter-spacing: 2px;
-    color: rgba(116, 116, 185, 1);
+    color: rgba(238, 162, 164, 1);
     font-size: 16px;
     font-weight: bold
 }
@@ -396,11 +445,11 @@ a.active {
 .timeline-event:hover .timeline-event-icon {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    background-color: rgba(116, 116, 185, 1);
+    background-color: rgba(238, 162, 164, 1);
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-    box-shadow: inset 40em 0 0 0 rgba(116, 116, 185, 1);
+    box-shadow: inset 40em 0 0 0 rgba(238, 162, 164, 1);
 }
 
 .timeline-event-copy {
@@ -435,7 +484,7 @@ a.active {
     transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: rgba(116, 116, 185, 1);
+    background-color: rgba(238, 162, 164, 1);
     outline: 10px solid #f3f3f3;
     display: block;
     margin: 0.5em 0.5em 0.5em -0.5em;
@@ -459,7 +508,7 @@ a.active {
     font-size: 16px;
     font-weight: bold;
     background-color: #444;
-    box-shadow: inset 0 0 0 0em rgba(116, 116, 185, 1);
+    box-shadow: inset 0 0 0 0em rgba(238, 162, 164, 1);
     display: inline-block;
     margin-bottom: 1.2em;
     padding: 0.5em 2em 0.4em 2em;
@@ -499,7 +548,7 @@ a.active {
 }
 
 .portfolio .categories-grid .categories ul li a.active {
-    background-color: rgba(116, 116, 185, 1);
+    background-color: rgba(238, 162, 164, 1);
     padding: 0px 20px;
     color: white;
     text-decoration: none;
@@ -522,7 +571,7 @@ a.active {
     left: 0px;
     height: 100%;
     width: 100%;
-    background-color: rgba(116, 116, 185, 0.8);
+    background-color: rgba(238, 162, 164, 0.8);
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
     opacity: 0;
@@ -557,7 +606,7 @@ a.active {
 .portfolio_item .portfolio_item_hover .item_info em {
     font-style: normal;
     display: inline-block;
-    background-color: rgba(116, 116, 185, 1);
+    background-color: rgba(238, 162, 164, 1);
     padding: 5px 20px;
     color: #fff;
     margin-top: 10px;
@@ -663,7 +712,7 @@ a.active {
 
 #contact {
     padding: 100px 0;
-    background: #f3f3f3
+    background: #e0e0e0
 }
 
 #contact-form input,
@@ -736,11 +785,11 @@ fieldset {
 }
 
 #success p {
-    color: rgba(116, 116, 185, 1);
+    color: rgba(238, 162, 164, 1);
     font-size: 15px;
     text-align: center;
     padding: 10px;
-    border: 2px solid rgba(116, 116, 185, 1);
+    border: 2px solid rgba(238, 162, 164, 1);
     margin-top: 10px;
 }
 
@@ -754,7 +803,7 @@ fieldset {
 }
 
 #submit {
-    background-color: rgba(116, 116, 185, 1);
+    background-color: rgba(238, 162, 164, 1);
     color: #fff;
     padding: 10px 40px;
     border-radius: 0;
@@ -783,7 +832,7 @@ fieldset {
 }
 
 .social li a:hover {
-    color: rgba(116, 116, 185, 1);
+    color: rgba(238, 162, 164, 1);
 }
 
 
