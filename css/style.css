@@ -105,6 +105,31 @@ p {
     box-shadow: inset 40em 0 0 0 rgba(238, 162, 164, 1);
 }
 
+.method {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: rgba(238, 162, 164, 1);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #444;
+    box-shadow: inset 0 0 0 0em white;
+    display: inline-block;
+    margin-bottom: 1.2em;
+    margin-right: 1.2em;
+    padding: 0.5em 2em 0.4em 2em;
+}
+
+.method:hover {
+    color: white;
+    box-shadow: inset 40em 0 0 0 rgba(238, 162, 164, 1);
+}
+
 
 
 
@@ -122,6 +147,11 @@ body {
     line-height: 50px
 }
 
+.size-30 {
+    font-size: 30px;
+    line-height: 30px
+}
+
 .h-50 {
     height: 50px;
 }
@@ -137,7 +167,7 @@ mark{
 }
 
 .iframe-container {
-  padding-top: 36.25%; /* 16:9 */
+  padding-top: 45%; /* 16:9 */
   position: relative;
 } 
 
@@ -449,7 +479,7 @@ a.active {
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-    box-shadow: inset 40em 0 0 0 rgba(238, 162, 164, 1);
+    box-shadow: inset 40em 0 0 0 #444;
 }
 
 .timeline-event-copy {
@@ -507,8 +537,8 @@ a.active {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    background-color: #444;
-    box-shadow: inset 0 0 0 0em rgba(238, 162, 164, 1);
+    background-color: rgba(238, 162, 164, 1);
+    box-shadow: inset 0 0 0 0em #444;
     display: inline-block;
     margin-bottom: 1.2em;
     padding: 0.5em 2em 0.4em 2em;
