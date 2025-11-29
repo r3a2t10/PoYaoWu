@@ -72,6 +72,15 @@ h5 {
     font-weight: 400;
 }
 
+h6 {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    color: #888;
+    margin-left: 0px;
+    font-weight: 400;
+}
+
 p {
     font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
