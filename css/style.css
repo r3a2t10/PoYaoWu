@@ -156,6 +156,10 @@ body {
     height: 50px;
 }
 
+.h-30 {
+    height: 30px;
+}
+
 .h-img {
     height: 60px;
 }
@@ -361,18 +365,22 @@ nav li a {
     padding: 10px;
 }
 
+a {
+    font-weight: bold;
+    color: rgba(238, 162, 164, 1);
+}
+
 a:focus {
-    color: #444;
-    text-decoration: none;
+    color: rgba(238, 162, 164, 1);
 }
 
 a:hover {
-    color: rgba(238, 162, 164, 1);
+    color: rgb(233, 115, 119);
     text-decoration: none;
 }
 
 a.active {
-    color: rgba(238, 162, 164, 1);
+    color: rgb(233, 115, 119);
 }
 
 
