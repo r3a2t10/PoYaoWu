@@ -102,6 +102,33 @@ $(document).ready(function () {
             return false;
         });
 
+        // Count items for each filter
+        function updateFilterCounts() {
+            var $container = $('.portfolio_container');
+            
+            $('.portfolio_filter a').each(function () {
+                var filterValue = $(this).attr('data-filter');
+
+                // count items
+                var count;
+                if (filterValue === '*') {
+                    count = $container.find('.portfolio_item').length;
+                } else {
+                    count = $container.find(filterValue).length;
+                }
+
+                // update text: keep original text + number
+                var baseText = $(this).data("base-text");
+                if (!baseText) {
+                    baseText = $(this).text();         // store original
+                    $(this).data("base-text", baseText);
+                }
+                $(this).text(baseText + " | " + count);
+            });
+        }
+
+        // Call on load
+        updateFilterCounts();
     });
 
     //animatedModal
