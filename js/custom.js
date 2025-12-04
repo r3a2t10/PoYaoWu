@@ -80,6 +80,21 @@ $(document).ready(function () {
         disable: 'mobile'
     });
 
+    // 讓所有 img-responsive 變成點擊可放大
+    $('.modal-content').magnificPopup({
+        delegate: 'img.img-responsive', // 只抓你的單頁這些圖
+        type: 'image',
+        gallery: {
+            enabled: true  // 可以左右切換下一張/上一張
+        },
+        callbacks: {
+            elementParse: function(item) {
+                // 使用圖片自身的 src 當放大圖
+                item.src = item.el.attr('src');
+            }
+        }
+    });
+
     //  isotope
     $('#projects').waitForImages(function () {
         var $container = $('.portfolio_container');
