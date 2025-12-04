@@ -95,6 +95,17 @@ $(document).ready(function () {
         }
     });
 
+    // ② 禁止圖片右鍵（只限這個頁面的內容區）
+    $('.modal-content').on('contextmenu', 'img', function (e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // ③ 禁止拖曳圖片（避免拖到桌面）
+    $('.modal-content').on('dragstart', 'img', function (e) {
+        e.preventDefault();
+    });
+
     //  isotope
     $('#projects').waitForImages(function () {
         var $container = $('.portfolio_container');

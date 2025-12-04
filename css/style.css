@@ -139,8 +139,11 @@ p {
     box-shadow: inset 40em 0 0 0 rgba(238, 162, 164, 1);
 }
 
-
-
+.modal-content img.img-responsive {
+    cursor: zoom-in;
+    -webkit-touch-callout: none; /* iOS 長按選單減弱 */
+    -webkit-user-drag: none;
+}
 
 /* General
 ==================================================*/
