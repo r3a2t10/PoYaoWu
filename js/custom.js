@@ -99,6 +99,21 @@ $(document).ready(function () {
                     animationEngine: "jquery"
                 }
             });
+
+            // ⭐ 關鍵：等 Isotope 排版完成後，再刷新 AOS
+            $container.one('arrangeComplete', function () {
+                if (typeof AOS !== 'undefined') {
+                    // 基本上 refresh 就夠用了，真的很怪再試 refreshHard
+                    AOS.refresh(); 
+                    // AOS.refreshHard();
+                }
+            });
+
+            AOS.init({
+                duration: 600,
+                once: false // 如果只想播一次可以改 true
+            });
+
             return false;
         });
 
@@ -131,7 +146,7 @@ $(document).ready(function () {
         updateFilterCounts();
     });
 
-        // 讓所有 img-responsive 變成點擊可放大
+    // 讓所有 img-responsive 變成點擊可放大
     $('.modal-content').magnificPopup({
         delegate: 'img.img-responsive', // 只抓你的單頁這些圖
         type: 'image',
