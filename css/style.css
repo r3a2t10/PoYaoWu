@@ -438,10 +438,45 @@ a.active {
 ==================================================*/
 
 #home {
-    background: url(../img/home-bg.jpg);
-    background-size: cover;
+    position: relative;
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
+
+/* 背景層 */
+.home-bg {
+    position: absolute;
+    inset: 0;
+
+    /* 填滿 */
+    width: 104%;
+    height: 104%;
+    top: -2%;
+    left: -2%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 1;
+    transition: opacity 1.2s ease-in-out;
+
+    z-index: 0;  /* 🔥 背景永遠在後面 */
+}
+
+/* 文字層固定在最前面 */
+#home .container,
+#home .table-cell,
+#home *:not(.home-bg) {
+    position: relative;
+    z-index: 10;   /* 🔥 文字永遠在最上層 */
+}
+
+.home-bg.fade-out {
+    opacity: 0;   /* 🔥 只有背景淡出，文字完全不受影響 */
+}
+
 
 .table-cell {
     display: table-cell;

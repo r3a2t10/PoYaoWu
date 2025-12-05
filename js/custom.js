@@ -229,3 +229,27 @@ $(document).ready(function () {
 
     });*/
 });
+
+const bgImages = [
+    'img/home-bg-1.jpg',
+    'img/home-bg-2.jpg'
+];
+
+let index = 0;
+const bgEl = document.querySelector('.home-bg');
+
+bgEl.style.backgroundImage = `url(${bgImages[0]})`;
+
+function changeBg() {
+    const next = (index + 1) % bgImages.length;
+
+    bgEl.classList.add('fade-out');
+
+    setTimeout(() => {
+        bgEl.style.backgroundImage = `url(${bgImages[next]})`;
+        bgEl.classList.remove('fade-out');
+        index = next;
+    }, 1200);
+}
+
+setInterval(changeBg, 6000);
