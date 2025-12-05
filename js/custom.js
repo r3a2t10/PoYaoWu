@@ -156,132 +156,11 @@ $(document).ready(function () {
     $('.modal-content').on('dragstart', 'img', function (e) {
         e.preventDefault();
     });
-
-    //animatedModal
-    $("#demo01").animatedModal({
-        modalTarget:'D01'
-    });
-
-    $("#demo02").animatedModal({
-        modalTarget:'D02'
-    });
-
-    $("#demo03").animatedModal({
-        modalTarget:'D03'
-    });
-
-    $("#demo04").animatedModal({
-        modalTarget:'D04'
-    });
-
-    $("#demo05").animatedModal({
-        modalTarget:'D05'
-    });
-
-    $("#demo06").animatedModal({
-        modalTarget:'D06'
-    });
-
-    $("#demo07").animatedModal({
-        modalTarget:'D07'
-    });
-
-    $("#demo08").animatedModal({
-        modalTarget:'D08'
-    });
-
-    $("#demo09").animatedModal({
-        modalTarget:'D09'
-    });
-
-    $("#demo10").animatedModal({
-        modalTarget:'D10'
-    });
-
-    $("#demo11").animatedModal({
-        modalTarget:'D11'
-    });
-
-    $("#demo12").animatedModal({
-        modalTarget:'D12'
-    });
-
-    $("#demo13").animatedModal({
-        modalTarget:'D13'
-    });
-
-    $("#demo14").animatedModal({
-        modalTarget:'D14'
-    });
-
-    $("#demo15").animatedModal({
-        modalTarget:'D15'
-    });
-
-    $("#demo16").animatedModal({
-        modalTarget:'D16'
-    });
-
-    $("#demo17").animatedModal({
-        modalTarget:'D17'
-    });
-
-    $("#demo18").animatedModal({
-        modalTarget:'D18'
-    });
-
-    $("#demo19").animatedModal({
-        modalTarget:'D19'
-    });
-
-    $("#demo20").animatedModal({
-        modalTarget:'D20'
-    });
-
-    $("#demo21").animatedModal({
-        modalTarget:'D21'
-    });
-
-    $("#demo22").animatedModal({
-        modalTarget:'D22'
-    });
-
-    $("#demo23").animatedModal({
-        modalTarget:'D23'
-    });
-
-    $("#demo24").animatedModal({
-        modalTarget:'D24'
-    });
-
-    $("#demo25").animatedModal({
-        modalTarget:'D25'
-    });
-
-    $("#demo26").animatedModal({
-        modalTarget:'D26'
-    });
-
-    $("#demo27").animatedModal({
-        modalTarget:'D27'
-    });
-
-    $("#demo28").animatedModal({
-        modalTarget:'D28'
-    });
-
-    $("#demo29").animatedModal({
-        modalTarget:'D29'
-    });
-
-    $("#demo30").animatedModal({
-        modalTarget:'D30'
-    });
     
     // Contact Form 	
 
     // validate contact form
-    $(function () {
+    /*$(function () {
         $('#contact-form').validate({
             rules: {
                 name: {
@@ -333,5 +212,5 @@ $(document).ready(function () {
             }
         });
 
-    });
+    });*/
 });
