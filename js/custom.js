@@ -80,32 +80,6 @@ $(document).ready(function () {
         disable: 'mobile'
     });
 
-    // 讓所有 img-responsive 變成點擊可放大
-    $('.modal-content').magnificPopup({
-        delegate: 'img.img-responsive', // 只抓你的單頁這些圖
-        type: 'image',
-        gallery: {
-            enabled: true  // 可以左右切換下一張/上一張
-        },
-        callbacks: {
-            elementParse: function(item) {
-                // 使用圖片自身的 src 當放大圖
-                item.src = item.el.attr('src');
-            }
-        }
-    });
-
-    // ② 禁止圖片右鍵（只限這個頁面的內容區）
-    $('.modal-content').on('contextmenu', 'img', function (e) {
-        e.preventDefault();
-        return false;
-    });
-
-    // ③ 禁止拖曳圖片（避免拖到桌面）
-    $('.modal-content').on('dragstart', 'img', function (e) {
-        e.preventDefault();
-    });
-
     //  isotope
     $('#projects').waitForImages(function () {
         var $container = $('.portfolio_container');
@@ -155,6 +129,32 @@ $(document).ready(function () {
 
         // Call on load
         updateFilterCounts();
+    });
+
+        // 讓所有 img-responsive 變成點擊可放大
+    $('.modal-content').magnificPopup({
+        delegate: 'img.img-responsive', // 只抓你的單頁這些圖
+        type: 'image',
+        gallery: {
+            enabled: true  // 可以左右切換下一張/上一張
+        },
+        callbacks: {
+            elementParse: function(item) {
+                // 使用圖片自身的 src 當放大圖
+                item.src = item.el.attr('src');
+            }
+        }
+    });
+
+    // ② 禁止圖片右鍵（只限這個頁面的內容區）
+    $('.modal-content').on('contextmenu', 'img', function (e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // ③ 禁止拖曳圖片（避免拖到桌面）
+    $('.modal-content').on('dragstart', 'img', function (e) {
+        e.preventDefault();
     });
 
     //animatedModal
