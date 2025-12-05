@@ -38,8 +38,8 @@ font-family: 'Open Sans', sans-serif;
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 80px;
-    line-height: 70px;
+    font-size: 70px;
+    line-height: 60px;
 }
 
 h4 {
@@ -456,11 +456,10 @@ a.active {
     left: -2%;
 
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
 
     opacity: 1;
-    transition: opacity 1.2s ease-in-out;
+    transition: opacity 1s ease-in-out;
 
     z-index: 0;  /* 🔥 背景永遠在後面 */
 }

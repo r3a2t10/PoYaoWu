@@ -232,7 +232,10 @@ $(document).ready(function () {
 
 const bgImages = [
     'img/home-bg-1.jpg',
-    'img/home-bg-2.jpg'
+    'img/home-bg-2.jpg',
+    'img/home-bg-3.jpg',
+    'img/home-bg-4.jpg',
+    'img/home-bg-5.jpg'
 ];
 
 let index = 0;
@@ -249,7 +252,7 @@ function changeBg() {
         bgEl.style.backgroundImage = `url(${bgImages[next]})`;
         bgEl.classList.remove('fade-out');
         index = next;
-    }, 1200);
+    }, 1000);
 }
 
-setInterval(changeBg, 6000);
+setInterval(changeBg, 4000);
