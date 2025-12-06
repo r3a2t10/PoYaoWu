@@ -38,8 +38,8 @@ font-family: 'Open Sans', sans-serif;
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 70px;
-    line-height: 60px;
+    font-size: 60px;
+    line-height: 50px;
 }
 
 h4 {
@@ -372,7 +372,6 @@ mark{
     }
 }
 
-
 /* Header
 ==================================================*/
 
@@ -456,6 +455,7 @@ a.active {
 
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     opacity: 1;
     transition: opacity 1s ease-in-out;
@@ -484,6 +484,48 @@ a.active {
 .disply-table {
     display: table;
     height: 100vh;
+}
+
+/* 讓 table-cell 變成 flex 容器 */
+.table-cell {
+    display: flex;
+    align-items: center;      /* 垂直置中 */
+    justify-content: flex-start; /* 內容靠左 */
+    min-height: 100vh;        /* 如果你 home 用滿版，可以這樣寫 */
+}
+
+/* 旋轉那塊文字 */
+.vertical-text {
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: center;   /* 以中心為旋轉中心 */
+    /* 可視需求調整位移 */
+    margin-left: -12rem;
+    margin-bottom: -12em;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 10px;
+}
+
+/* 標題排版微調 */
+.vertical-text h4,
+.vertical-text h1 {
+    line-height: 0.5;
+}
+
+.no-line::before {
+    display: none !important;
+    content: none !important;
+}
+
+.no-line {
+    margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+    .vertical-text {
+        margin-left: -5rem;
+        margin-bottom: -5em;
+    }
 }
 
 

@@ -62,8 +62,6 @@ $(document).ready(function () {
         }
     });
 
-
-
     // Parallax
     var parallax = function () {
         $(window).stellar();
@@ -231,11 +229,7 @@ $(document).ready(function () {
 });
 
 const bgImages = [
-    'img/home-bg-1.jpg',
-    'img/home-bg-2.jpg',
-    'img/home-bg-3.jpg',
-    'img/home-bg-4.jpg',
-    'img/home-bg-5.jpg'
+    'img/home-bg-1.jpg'
 ];
 
 let index = 0;
