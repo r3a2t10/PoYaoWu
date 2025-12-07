@@ -251,7 +251,7 @@ function changeBg() {
         bgEl.style.backgroundImage = `url(${bgImages[next]})`;
         bgEl.classList.remove('fade-out');
         index = next;
-    }, 1000);
+    }, 1200);
 }
 
-setInterval(changeBg, 4000);
+setInterval(changeBg, 5000);
