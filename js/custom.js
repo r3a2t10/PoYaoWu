@@ -13,6 +13,34 @@ $(window).load(function () {
 $(document).ready(function () {
     "use strict";
 
+    const bgImages = [
+        'img/home-bg-1.jpg',
+        'img/home-bg-2.jpg',
+        'img/home-bg-3.jpg',
+        'img/home-bg-4.jpg',
+        'img/home-bg-5.jpg',
+        'img/home-bg-6.jpg'
+    ];
+
+    let index = 0;
+    const bgEl = document.querySelector('.home-bg');
+
+    bgEl.style.backgroundImage = `url(${bgImages[0]})`;
+
+    function changeBg() {
+        const next = (index + 1) % bgImages.length;
+
+        bgEl.classList.add('fade-out');
+
+        setTimeout(() => {
+            bgEl.style.backgroundImage = `url(${bgImages[next]})`;
+            bgEl.classList.remove('fade-out');
+            index = next;
+        }, 1200);
+    }
+
+    setInterval(changeBg, 5000);
+
     // scroll menu
     var sections = $('.section'),
         nav = $('.navbar-fixed-top,footer'),
@@ -227,31 +255,3 @@ $(document).ready(function () {
 
     });*/
 });
-
-const bgImages = [
-    'img/home-bg-1.jpg',
-    'img/home-bg-2.jpg',
-    'img/home-bg-3.jpg',
-    'img/home-bg-4.jpg',
-    'img/home-bg-5.jpg',
-    'img/home-bg-6.jpg'
-];
-
-let index = 0;
-const bgEl = document.querySelector('.home-bg');
-
-bgEl.style.backgroundImage = `url(${bgImages[0]})`;
-
-function changeBg() {
-    const next = (index + 1) % bgImages.length;
-
-    bgEl.classList.add('fade-out');
-
-    setTimeout(() => {
-        bgEl.style.backgroundImage = `url(${bgImages[next]})`;
-        bgEl.classList.remove('fade-out');
-        index = next;
-    }, 1200);
-}
-
-setInterval(changeBg, 5000);
