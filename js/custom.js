@@ -12,7 +12,7 @@ $(window).load(function () {
 
 $(document).ready(function () {
     "use strict";
-
+    /*
     const bgImages = [
         'img/home-bg-1.jpg',
         'img/home-bg-2.jpg',
@@ -40,6 +40,53 @@ $(document).ready(function () {
     }
 
     setInterval(changeBg, 5000);
+    */
+
+    // 🔥 HOME 背景輪播：先顯示第一張 + 每次切換前先確保該張已載入
+    const bgImages = [
+        'img/home-bg-1.jpg',
+        'img/home-bg-2.jpg',
+        'img/home-bg-3.jpg',
+        'img/home-bg-4.jpg',
+        'img/home-bg-5.jpg',
+        'img/home-bg-6.jpg'
+    ];
+
+    let index = 0;
+    const bgEl = document.querySelector('.home-bg');
+
+    if (bgEl && bgImages.length > 0) {
+        // 先顯示第一張，避免一開始是透明的
+        bgEl.style.backgroundImage = `url(${bgImages[0]})`;
+
+        function changeBg() {
+            const next = (index + 1) % bgImages.length;
+            const nextUrl = bgImages[next];
+
+            const img = new Image();
+            img.onload = function () {
+                // 圖片確定載好之後再做淡出 / 換圖 / 淡入
+                bgEl.classList.add('fade-out');
+
+                setTimeout(function () {
+                    bgEl.style.backgroundImage = `url(${nextUrl})`;
+                    bgEl.classList.remove('fade-out');
+                    index = next;
+                }, 1200);
+            };
+
+            img.onerror = function () {
+                // 如果這張壞掉，就直接跳過這張
+                console.warn('Background image failed to load:', nextUrl);
+                index = next;
+            };
+
+            img.src = nextUrl;
+        }
+
+        // 每 5 秒切換一次
+        setInterval(changeBg, 5000);
+    }
 
     // scroll menu
     var sections = $('.section'),
